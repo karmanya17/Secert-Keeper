@@ -90,7 +90,7 @@ app.get("/login",function(req,res){
 app.get("/register",function(req,res){
   res.render("register");
 });
-
+//Route for finding the user from DB
 app.get("/secrets",function(req,res){                             //Validating whether the page is authenticated or not .
   User.find({"secret":{$ne:null}},function(err,foundUsers){
     if(err)
